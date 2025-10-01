@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Build files
+build/
+
+# Cache
+.cache/
+*.cache
+
+# Large files
+*.zip
+*.pack
+
+# Environment
+.env
+.env.local
+
+# Backend
+backend/

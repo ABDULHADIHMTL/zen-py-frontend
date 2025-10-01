@@ -1,0 +1,121 @@
+/* Hero.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #2C2F34;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .h-screen {
+    height: 70vh;
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  .bg-image {
+    width: 100%;
+    height: 40%;
+    background: url('../../img/puzzle-business-2._resizejpg.jpg') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .z-10 {
+    z-index: 10;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .h-full {
+    height: 100%;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .md\\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+  .lg\\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  
+  .text-4xl {
+    font-size: 2.25rem;
+  }
+  
+  .md\\:text-5xl {
+    font-size: 3rem;
+  }
+  
+  .lg\\:text-6xl {
+    font-size: 4rem;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .md\\:text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .lg\\:text-2xl {
+    font-size: 1.5rem;
+  }
+  
+
+  #textbg{
+background: #e6e6e6;
+display: flex;
+justify-content: center;
+align-items: center;
+  }
+  #text{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background: linear-gradient(#fee140, #fa709a);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }

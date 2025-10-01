@@ -1,0 +1,134 @@
+/* service */
+#parallax-background{
+    background-image: url("../../../img/pexels-fauxels-3184292.jpg");
+
+}
+#parallax-background1{
+    background-image: url("../../../img/services.png");
+}
+
+/* website */
+#website-background{
+    background-image: url("../../../img/ecommerce_page.png");
+
+}
+#website-background1{
+    background-image: url("../../../img/ecommerce_page.png");
+
+}
+
+/* application */
+#application-background{
+    background-image: url("../../../img/Application_page.jpg");
+
+}
+#application-background1{
+    background-image: url("../../../img/slider2.jpg");
+
+}
+/* database */
+#database-background{
+    background-image: url("../../../img/database\ \(1\).jpg");
+
+}
+#database-background1{
+    background-image: url("../../../img/International_Payments_Banner-scaled-1.jpg");
+
+}
+/* microsoft */
+#microsoft-background{
+    background-image: url("../../../img/Application_page.jpg");
+
+}
+#microsoft-background1{
+    background-image: url("../../../img/Application_page.jpg");
+
+}
+/* testing */
+#testing-background{
+    background-image: url("../../../img/software-testing-headbanner.jpg");
+
+}
+#testing-background1{
+    background-image: url("../../../img/testing2.jpg");
+
+}
+
+/* about */
+#about-background{
+    background-image: url("../../../img/about-us.jpg");
+
+}
+#about-background1{
+    background-image: url("../../../img/testing2.jpg");
+
+}
+
+/* vision */
+#vision-background{
+    background-image: url("../../../img/growth-7558931_1280.jpg");
+
+}
+#vision-background1{
+    background-image: url("../../../img/testing2.jpg");
+
+}
+
+/* career */
+#career-background{
+    background-image: url("../../../img/joinus.jpg");
+
+}
+#career-background1{
+    background-image: url("../../../img/testing2.jpg");
+
+}
+
+/* contact */
+#contact-background{
+    background-image: url("../../../img/software-testing-headbanner.jpg");
+
+}
+#contact-background1{
+    background-image: url("../../../img/testing2.jpg");
+
+}
+
+
+
+@media (max-width: 480px) {
+    #service_scrollimg{
+        height: 400px;
+     }
+     #parallax-text1{
+        top: 900px;
+     }
+  }
+
+  @media (min-width: 768px) {
+   
+
+  }
+  
+  @media (min-width: 1024px) {
+ #service_scrollimg{
+    height: 800px;
+ }
+ #parallax-text1{
+    top: 700px;
+ }
+  }
+
+/* projects page background */
+#projects-background {
+  background-image: url("../../../img/Application_page.jpg"); /* 👈 change to your Projects image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; /* full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}

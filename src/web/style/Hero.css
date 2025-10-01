@@ -1,0 +1,110 @@
+
+.image-container {
+    position: relative;
+    width: auto;  /* Adjust to fit your image size */
+    height: 500px; /* Adjust to fit your image size */
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .base-image {
+    z-index: 1;
+    height: max-content;
+  }
+  
+  .overlay-image {
+    z-index: 2;
+    opacity: 0.7;  /* Adjust opacity if needed */
+  }
+  
+  /* Optional: Specific styles for each overlay image */
+  .overlay-image-1 {
+    top: -110px;
+    opacity: 1;  
+    height: max-content;
+    z-index: 3;
+
+  }
+  
+  .overlay-image-2 {
+    top: 240px;
+    opacity: 1;  
+    height: max-content;
+  }
+  
+  .overlay-image-3 {
+    top: 490px;
+    opacity: 1;  
+    height: max-content; 
+
+  }
+  #bg-image{
+    background-image: url("../../img/puzzle-business-2._resizejpg.jpg");
+  }
+
+
+
+ 
+
+
+
+  @media (max-width: 480px) {
+
+    #mySvg{
+      height: 275px;
+    }
+    #mySvg2{
+      height: 60px;
+      margin-top: -290px;
+      margin-left: 270px;
+    }
+    #mySvg3{
+      height: 80px;
+      margin-top: -180px;
+      margin-left: 110px;
+    }
+    #mySvg4{
+      height: 100px;
+      margin-top: -256px;
+      margin-right: 120px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #mySvg {
+      height: 450px;
+    }
+    #mySvg2{
+      height: 100px;
+      margin-top: -250px;
+      margin-left: 250px;
+    }
+
+  }
+  
+  @media (min-width: 1024px) {
+    #mySvg {
+      height: 950px 
+    }
+    #mySvg2{
+      height: 200px;
+      margin-top: -360px;
+      margin-left: 800px;
+    }
+    #mySvg3{
+      height: 300px;
+      margin-top: -700px;
+      margin-left: 500px;
+    }
+    #mySvg4{
+      height: 300px;
+      margin-top: -910px;
+      margin-right: 120px;
+    }
+  }

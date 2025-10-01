@@ -1,0 +1,32 @@
+ 
+/* client-testimonial-section */
+.client-testimonial-section .client-testimonial-box {
+    padding: 20px;
+    text-align: start;
+    box-shadow: 0 3px 16px 0 rgb(255, 254, 254);
+    margin: 13px;
+    background-color: hsl(236, 80%, 51%); /* Your dark blue color */
+    
+}
+
+.client-testimonial-section .swiper-slide {
+    background: transparent;
+}
+
+.client-testimonial-section .client-testimonial-box .quote-icon svg {
+    font-size: 27px;
+    color: #e2d40d;
+    margin-bottom: 20px;
+}
+
+.client-testimonial-section .client-testimonial-box p {
+    font-size: 14px;
+}
+
+.client-testimonial-section .client-testimonial-box .heading-h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+
