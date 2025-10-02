@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
 import '../pages/services/service.css';
 import { FaMobileAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { MdOutlineMailLock } from 'react-icons/md';
@@ -23,19 +22,37 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    
+    const formData = new FormData(form.current);
+    const data = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      message: formData.get('message')
+    };
 
-    emailjs
-      .sendForm('service_olcp9xf', 'template_rxu1ky8', form.current, {
-        publicKey: 'nkd7lY4bt2KmttPP5',
-      })
-      .then(
-        () => {
-          alert('SUCCESSFULL MESSAGE SEND'); // ✅ FIXED: Changed console.alert to alert
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        }
-      );
+    // Send to YOUR backend instead of EmailJS
+    fetch('https://zen-py-backend-production.up.railway.app/api/enquire', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert('SUCCESSFULL MESSAGE SEND');
+        form.current.reset(); // Clear the form
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    })
+    .catch(error => {
+      console.log('FAILED...', error);
+      alert('Network error. Please try again.');
+    });
   };
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -130,14 +147,14 @@ export default function Contact() {
                   type="text"
                   className="form-control border border-gray-300 p-2 rounded"
                   placeholder="First Name"
-                  name="firstname"
+                  name="firstName"
                   required
                 />
                 <input
                   type="text"
                   className="form-control border border-gray-300 p-2 rounded"
                   placeholder="Last Name"
-                  name="user_lastname"
+                  name="lastName"
                   required
                 />
               </div>
@@ -153,7 +170,7 @@ export default function Contact() {
                   type="text"
                   className="form-control border border-gray-300 p-2 rounded"
                   placeholder="Mobile Number"
-                  name="mobile"
+                  name="phone"
                   required
                 />
               </div>
@@ -166,7 +183,7 @@ export default function Contact() {
               ></textarea>
               <div className="text-center mt-5">
                 <button
-                  onClick={handleButtonClick}
+                  type="submit"
                   className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
                 >
                   Contact Us
